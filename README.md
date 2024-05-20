@@ -23,7 +23,7 @@ Azure Event Hubs emulator is designed to offer a local development experience fo
 
 >[!CAUTION]
 >The emulator is intended solely for development and testing scenarios.Any kind of Production use is strictly discouraged. There is no official support provided for emulator.
-> Any issues/suggestions should be reported via GitHub issues on emulator [GitHub project](https://github.com/Azure/azure-event-hubs-emulator/issues).
+> Any issues/suggestions should be reported via GitHub issues on emulator [GitHub project](https://github.com/Azure/azure-event-hubs-emulator-installer/issues).
 ## Run Azure Event Hubs emulator 
 
 This section summarizes the steps to develop and test locally with Event hubs emulator. To read more about Event hubs, read [here.](event-hubs-about.md)
