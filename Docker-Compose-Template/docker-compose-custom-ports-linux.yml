@@ -1,0 +1,22 @@
+name: microsoft-azure-eventhubs
+services:
+  emulator:
+    container_name: "eventhubs-emulator"
+    image: "mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest"
+    volumes:
+      - "${CONFIG_PATH}:/Eventhubs_Emulator/ConfigFiles/Config.json"
+    ports:
+      - "5672:5672"
+    environment:
+      BLOB_SERVER: host.docker.internal:10005
+      METADATA_SERVER: host.docker.internal:10007
+      ACCEPT_EULA: ${ACCEPT_EULA}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  azurite:
+    container_name: "azurite"
+    image: "mcr.microsoft.com/azure-storage/azurite:latest"
+    ports:
+      - "10005:10000"
+      - "10006:10001"
+      - "10007:10002"

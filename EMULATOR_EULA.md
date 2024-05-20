@@ -7,7 +7,7 @@ These license terms are an agreement between you and Microsoft Corporation (or o
 1. INSTALLATION AND USE RIGHTS.
 a) General. You may install and use any number of copies of the software to develop and test your applications, solely for the purpose stated above and otherwise for your internal business purposes.
 2. DATA. This software may interact with other Microsoft products that collect data that is transmitted to Microsoft. To learn more about how Microsoft processes personal data we collect, please see the Microsoft Privacy Statement at https://go.microsoft.com/fwlink/?Linkid=248681.
-3. SCOPE OF UCENSE. The software is licensed, not sold. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you will not (and have no right to):
+3. SCOPE OF LICENSE. The software is licensed, not sold. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you will not (and have no right to):
 a) work around any technical limitations in the software that only allow you to use it in certain ways;
 b) reverse engineer, decompile or disassemble the software, or otherwise attempt to derive the source code for the software, except and to the extent required by third party licensing terms governing use of certain open source components that may be included in the software;
 c) remove, minimize, block, or modify any notices of Microsoft or its suppliers in the software;
