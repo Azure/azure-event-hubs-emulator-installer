@@ -57,35 +57,35 @@ After completing the prerequisites, you can proceed with the following steps to 
 `$>Start-Process powershell -Verb RunAs -ArgumentList 'Set-ExecutionPolicy Bypass –Scope CurrentUser’`
 
 2. Execute setup script `LaunchEmulator.ps1`. Running the script would bring up two containers – Event Hubs emulator & Azurite (dependency for Emulator)
-3. Once the steps are successful, you could find containers running in Docker Desktop.
 
 ### Linux & macOS
 After completing the prerequisites, you can proceed with the following steps to run the Event Hubs emulator locally. 
 
 1. Execute the setup script `LaunchEmulator.sh` . Running the script would  bring up two containers – Event Hubs emulator & Azurite (dependency for Emulator)
-2. Once the steps are successful, you could find containers running in Docker.
-
-
 
 ## [Using Docker Compose (Linux Container)](#tab/docker-linux-container)
 
 You can also spin up Emulator using Docker Compose file from Microsoft Container Registry. Refer [here](https://mcr.microsoft.com/en-us/product/azure-messaging/eventhubs-emulator/about#usage) for details 
 
->[!TIP]
-> $Default [consumer group](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups) is created by default when emulator runs. You can't create $default consumer group with supplied configuration.
+Once the steps are successful, you could find containers running in Docker:
 
+![image](https://github.com/Azure/azure-event-hubs-emulator-installer/assets/62641016/f7c8d2ad-dea1-4fd5-84b6-8f105ce2b602)
 
 ## Interacting with Emulator
 
-You can use the following connection string to connect to Azure Event Hubs emulator.
+1. You can use the following connection string to connect to Azure Event Hubs emulator.
 ```
 "Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
 ```
-To get started, refer to our GitHub Samples [here.](https://github.com/Azure/azure-event-hubs-emulator/tree/main/Sample-Code-Snippets)
+2. With the latest client SDK releases, you can interact with the emulator in various programming language. For details, refer [here](https://review.learn.microsoft.com/en-us/azure/event-hubs/test-locally-with-event-hub-emulator?branch=pr-en-us-272443&tabs=automated-script)
 
+To get started, refer to our GitHub Samples [here.](https://github.com/Azure/azure-event-hubs-emulator/tree/main/Sample-Code-Snippets)
+  
+>[!TIP]
+> $Default [consumer group](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups) is created by default when emulator runs. You can't create $default consumer group with supplied configuration.
 ## Support
 
-There is no official support provided for emulator.Any issues/suggestions should be reported via GitHub issues on emulator [GitHub project](https://github.com/Azure/azure-event-hubs-emulator/issues).
+There is no official support provided for emulator.Any issues/suggestions should be reported via GitHub issues on emulator [GitHub project](https://github.com/Azure/azure-event-hubs-emulator-installer/issues)
 
 ## License
 
