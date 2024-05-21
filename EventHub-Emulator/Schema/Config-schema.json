@@ -51,7 +51,9 @@
                                                     "Name": {
                                                         "type": "string",
                                                         "description": "Name of the consumer group",
-                                                        "default": "$default"
+                                                        "not": {
+                                                            "const": "$default"
+                                                        }
                                                     }
                                                 },
                                                 "required": ["Name"]
