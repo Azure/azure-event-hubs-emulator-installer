@@ -78,7 +78,7 @@
                     "properties": {
                         "Type": {
                             "type": "string",
-                            "description": "Type of logging",
+                            "description": "Types of logging",
                             "enum": ["File", "Console", "File,Console", "Console,File"]
                         }
                     },
