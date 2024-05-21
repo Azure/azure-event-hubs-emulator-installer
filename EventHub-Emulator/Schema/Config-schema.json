@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "UserConfig": {
+            "type": "object",
+            "description": "User specified configuration is defined here",
+            "properties": {
+                "NamespaceConfig": {
+                    "type": "array",
+                    "description": "Namespace configuration is defined here",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Type": {
+                                "type": "string",
+                                "description": "Type of the namespace",
+                                "enum": ["EventHub"]
+                            },
+                            "Name": {
+                                "type": "string",
+                                "description": "Name of the namespace",
+                                "enum": ["emulatorNs1"]
+                            },
+                            "Entities": {
+                                "type": "array",
+                                "description": "List of event hubs in the namespace",
+                                "minItems": 1,
+                                "maxItems": 10,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "Name": {
+                                            "type": "string",
+                                            "description": "Name of the event hub"
+                                        },
+                                        "PartitionCount": {
+                                            "type": "string",
+                                            "description": "Number of partitions in the event hub"
+                                        },
+                                        "ConsumerGroups": {
+                                            "type": "array",
+                                            "description": "List of consumer groups in the event hub",
+                                            "minItems": 1,
+                                            "maxItems": 20,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "Name": {
+                                                        "type": "string",
+                                                        "description": "Name of the consumer group",
+                                                        "default": "$default"
+                                                    }
+                                                },
+                                                "required": ["Name"]
+                                            },
+                                            "default": [
+                                                {
+                                                    "Name": "$default"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": ["Name", "PartitionCount"]
+                                }
+                            }
+                        },
+                        "required": ["Type", "Name", "Entities"]
+                    }
+                },
+                "LoggingConfig": {
+                    "type": "object",
+                    "description": "Configuration for logging is defined here",
+                    "enum": ["File", "Console", "File,Console", "Console,File"],
+                    "properties": {
+                        "Type": {
+                            "type": "string",
+                            "description": "Type of logging"
+                        }
+                    },
+                    "required": ["Type"]
+                }
+            },
+            "required": ["NamespaceConfig", "LoggingConfig"]
+        }
+    },
+    "required": ["UserConfig"],
+    "description": "Main user configuration object"
+}
