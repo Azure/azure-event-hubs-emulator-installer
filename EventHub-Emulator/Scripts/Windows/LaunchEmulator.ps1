@@ -15,7 +15,7 @@ if ($PSBoundParameters.ContainsKey('ACCEPT_EULA')) {
 }
 else{
     # EULA
-    $ACCEPT_EULA = Read-Host 'By pressing "Y", you are expressing your consent to the End User License Agreement (EULA) for Event-Hubs Emulator: https://github.com/Azure/azure-event-hubs-emulator/blob/main/LICENSE'
+    $ACCEPT_EULA = Read-Host 'By pressing "Y", you are expressing your consent to the End User License Agreement (EULA) for Event-Hubs Emulator: https://github.com/Azure/azure-event-hubs-emulator-installer/blob/main/EMULATOR_EULA.md'
     if ($ACCEPT_EULA -ne 'y' -and $ACCEPT_EULA -ne 'Y') {
         Write-Host "You must accept the EULA (Press 'Y') to continue. Exiting script."
         exit
