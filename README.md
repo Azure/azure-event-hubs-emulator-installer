@@ -77,7 +77,7 @@ Once the steps are successful, Emulator compose set can be found in running in D
 ```
 "Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
 ```
-2. With the latest client SDK releases, you can interact with the Emulator in various programming language. For details, refer [here](https://learn.microsoft.com/en-us/azure/event-hubs/test-locally-with-event-hub-emulator?tabs=automated-script#tabpanel_1_automated-script)
+2. With the latest client SDK releases, you can interact with the Emulator in various programming language. For details, refer [here](https://learn.microsoft.com/en-us/azure/event-hubs/sdks#client-sdks)
 
 To get started, refer to our GitHub Samples [here](https://github.com/Azure/azure-event-hubs-emulator-installer/tree/main/Sample-Code-Snippets).
   
