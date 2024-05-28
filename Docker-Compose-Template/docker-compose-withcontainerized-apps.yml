@@ -10,8 +10,8 @@ services:
     volumes:
       - "./Config.json:/Eventhubs_Emulator/ConfigFiles/Config.json"
     environment:
-      BLOB_SERVER: azurite
-      METADATA_SERVER: azurite
+      BLOB_SERVER: localhost
+      METADATA_SERVER: localhost
       ACCEPT_EULA: "N"
     network_mode: host
     depends_on:
