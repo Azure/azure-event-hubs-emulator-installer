@@ -19,6 +19,10 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
+**Logs**
+If applicable, add the logs generated from the container.
+To know more about logs please refer here: [EventHubs-Emulator Logs](https://learn.microsoft.com/en-us/azure/event-hubs/overview-emulator#drill-through-available-logs)
+
 **Desktop:**
  - OS: [e.g. Windows]
 
@@ -28,7 +32,8 @@ If applicable, add screenshots to help explain your problem.
 - Others (Please specify)
 
 **Docker Version:**
-- Docker Version:
+- Docker Desktop Version (If applicable): 
+- Docker Engine Version:
 
 **Arguments && Environment variables to start Emulator:**
 - ACCEPT_EULA:
