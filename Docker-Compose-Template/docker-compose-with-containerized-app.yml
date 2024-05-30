@@ -1,8 +1,11 @@
+# This Docker Compose sample is to demo :
+# Building a sample application with a Dockerfile and spinning EH-Emulator alongside it
+# By default all the three containers will be on the same docker bridge network
+
 name: "eventhubs-emulator-with-containerized-app"
 services:
   azurite:
     image: mcr.microsoft.com/azure-storage/azurite
-    network_mode: host
 
   emulator:
     image: mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest
@@ -12,7 +15,6 @@ services:
       BLOB_SERVER: localhost
       METADATA_SERVER: localhost
       ACCEPT_EULA: "N"
-    network_mode: host
     depends_on:
       - azurite
 
@@ -20,6 +22,5 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    network_mode: host
     depends_on:
       - emulator
