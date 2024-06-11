@@ -1,0 +1,23 @@
+# This workflow warns and then closes issues and PRs that have had no activity for a specified amount of time. It would exempt issues with lablel - enhancement.
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/actions/stale
+
+name: "Close stale issues"
+on:
+  schedule:
+  - cron: "30 1 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/stale@v4
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        days-before-stale: 60
+        days-before-close: 7
+        stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed if no further activity occurs. Thank you for your contributions.'
+        only-issues: true
+        exempt-issue-labels: 'enhancement'
