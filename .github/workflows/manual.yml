@@ -1,0 +1,22 @@
+# This workflow would attempt to automatically assign new issues to particular user
+
+name: "Auto-assign new issues to me"
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Assign issues to me
+      uses: actions/github-script@v5
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          github.issues.update({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            assignees: ['Saglodha']
+          })
