@@ -9,6 +9,11 @@ This app is an azure function with an eventHub trigger type.
 ```shell
 cd EventHub-Emulator/Scripts/Mac
 ./LaunchEmulator.sh --ACCEPT_EULA=Y
+
+# or run the docker compose file directly. From the root of the repo:
+ACCEPT_EULA=Y \
+  CONFIG_PATH=$(pwd)/EventHub-Emulator/Config/Config.json \
+  docker compose -f Docker-Compose-Template/docker-compose-default.yml up
 ```
 
 2) Start the Azure Function App
@@ -19,7 +24,7 @@ cd Sample-Code-Snippets/JavaScript/EventHubTrigger-FunctionApp
 npm install
 
 npm run start
-# or func start
+# or func start --verbose
 ```
 
 # The problem:
@@ -43,6 +48,10 @@ Function Runtime Version: 4.34.1.22669
 [2024-06-21T19:25:04.767Z] Microsoft.Azure.WebJobs.Host: The host has not yet started. Value cannot be null. (Parameter 'provider')
 [2024-06-21T19:25:04.794Z] Host startup operation has been canceled
 ```
+
+Verbose Logs can be found:
+
+- [func-start-verbose_log.txt](/Sample-Code-Snippets/JavaScript/EventHubTrigger-FunctionApp/func-start-verbose_log.txt)
 
 ## What I've Tried:
 

@@ -1,0 +1,254 @@
+
+                  %%%%%%
+                 %%%%%%
+            @   %%%%%%    @
+          @@   %%%%%%      @@
+       @@@    %%%%%%%%%%%    @@@
+     @@      %%%%%%%%%%        @@
+       @@         %%%%       @@
+         @@      %%%       @@
+           @@    %%      @@
+                %%
+                %
+
+
+Azure Functions Core Tools
+Core Tools Version:       4.0.5801 Commit hash: N/A +5ac2f09758b98257e728dd1b5576ce5ea9ef68ff (64-bit)
+Function Runtime Version: 4.34.1.22669
+
+[2024-06-21T20:10:34.707Z] Building host: version spec: , startup suppressed: 'False', configuration suppressed: 'False', startup operation id: '4e691519-2df4-469a-a67c-15151ad58224'
+[2024-06-21T20:10:34.772Z] Reading host configuration file '/Users/jsticha/WORK/RIPTiDE/IntelliJ_Workspace/azure-event-hubs-emulator-installer/Sample-Code-Snippets/JavaScript/EventHubTrigger-FunctionApp/host.json'
+[2024-06-21T20:10:34.772Z] Host configuration file read:
+[2024-06-21T20:10:34.772Z] {
+[2024-06-21T20:10:34.772Z]   "version": "2.0",
+[2024-06-21T20:10:34.772Z]   "logging": {
+[2024-06-21T20:10:34.772Z]     "applicationInsights": {
+[2024-06-21T20:10:34.772Z]       "samplingSettings": {
+[2024-06-21T20:10:34.772Z]         "isEnabled": true,
+[2024-06-21T20:10:34.772Z]         "excludedTypes": "Request"
+[2024-06-21T20:10:34.772Z]       }
+[2024-06-21T20:10:34.772Z]     }
+[2024-06-21T20:10:34.772Z]   }
+[2024-06-21T20:10:34.772Z] }
+[2024-06-21T20:10:34.790Z] FUNCTIONS_WORKER_RUNTIME set to node. Skipping WorkerConfig for language: python
+[2024-06-21T20:10:34.802Z] FUNCTIONS_WORKER_RUNTIME set to node. Skipping WorkerConfig for language: java
+[2024-06-21T20:10:34.803Z] FUNCTIONS_WORKER_RUNTIME set to node. Skipping WorkerConfig for language: powershell
+[2024-06-21T20:10:34.808Z] Extension Bundle not loaded. Loading extensions from /Users/jsticha/WORK/RIPTiDE/IntelliJ_Workspace/azure-event-hubs-emulator-installer/Sample-Code-Snippets/JavaScript/EventHubTrigger-FunctionApp/bin. BundleConfigured: False, PrecompiledFunctionApp: False, LegacyBundle: False, DotnetIsolatedApp: False, isLogicApp: False
+[2024-06-21T20:10:34.809Z] Script Startup resetting load context with base path: '/Users/jsticha/WORK/RIPTiDE/IntelliJ_Workspace/azure-event-hubs-emulator-installer/Sample-Code-Snippets/JavaScript/EventHubTrigger-FunctionApp/bin'.
+[2024-06-21T20:10:34.811Z] Loading startup extension 'EventHubs'
+[2024-06-21T20:10:34.843Z] Loaded extension 'EventHubs' (6.3.3.0)
+[2024-06-21T20:10:34.850Z] Reading host configuration file '/Users/jsticha/WORK/RIPTiDE/IntelliJ_Workspace/azure-event-hubs-emulator-installer/Sample-Code-Snippets/JavaScript/EventHubTrigger-FunctionApp/host.json'
+[2024-06-21T20:10:34.850Z] Host configuration file read:
+[2024-06-21T20:10:34.850Z] {
+[2024-06-21T20:10:34.850Z]   "version": "2.0",
+[2024-06-21T20:10:34.850Z]   "logging": {
+[2024-06-21T20:10:34.850Z]     "applicationInsights": {
+[2024-06-21T20:10:34.850Z]       "samplingSettings": {
+[2024-06-21T20:10:34.850Z]         "isEnabled": true,
+[2024-06-21T20:10:34.850Z]         "excludedTypes": "Request"
+[2024-06-21T20:10:34.850Z]       }
+[2024-06-21T20:10:34.850Z]     }
+[2024-06-21T20:10:34.850Z]   }
+[2024-06-21T20:10:34.850Z] }
+[2024-06-21T20:10:35.050Z] FUNCTIONS_WORKER_RUNTIME set to node. Skipping WorkerConfig for language: python
+[2024-06-21T20:10:35.050Z] FUNCTIONS_WORKER_RUNTIME set to node. Skipping WorkerConfig for language: java
+[2024-06-21T20:10:35.051Z] FUNCTIONS_WORKER_RUNTIME set to node. Skipping WorkerConfig for language: powershell
+[2024-06-21T20:10:35.152Z] Initializing Warmup Extension.
+[2024-06-21T20:10:35.186Z] Initializing Host. OperationId: '4e691519-2df4-469a-a67c-15151ad58224'.
+[2024-06-21T20:10:35.192Z] Host initialization: ConsecutiveErrors=0, StartupCount=1, OperationId=4e691519-2df4-469a-a67c-15151ad58224
+[2024-06-21T20:10:35.227Z] LoggerFilterOptions
+[2024-06-21T20:10:35.227Z] {
+[2024-06-21T20:10:35.227Z]   "MinLevel": "None",
+[2024-06-21T20:10:35.227Z]   "Rules": [
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": null,
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": null,
+[2024-06-21T20:10:35.227Z]       "Filter": "<AddFilter>b__0"
+[2024-06-21T20:10:35.227Z]     },
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": "None",
+[2024-06-21T20:10:35.227Z]       "Filter": null
+[2024-06-21T20:10:35.227Z]     },
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": null,
+[2024-06-21T20:10:35.227Z]       "Filter": "<AddFilter>b__0"
+[2024-06-21T20:10:35.227Z]     },
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": null,
+[2024-06-21T20:10:35.227Z]       "Filter": "<AddFilter>b__0"
+[2024-06-21T20:10:35.227Z]     }
+[2024-06-21T20:10:35.227Z]   ]
+[2024-06-21T20:10:35.227Z] }
+[2024-06-21T20:10:35.227Z] LoggerFilterOptions
+[2024-06-21T20:10:35.227Z] {
+[2024-06-21T20:10:35.227Z]   "MinLevel": "None",
+[2024-06-21T20:10:35.227Z]   "Rules": [
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": null,
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": null,
+[2024-06-21T20:10:35.227Z]       "Filter": "<AddFilter>b__0"
+[2024-06-21T20:10:35.227Z]     },
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": "None",
+[2024-06-21T20:10:35.227Z]       "Filter": null
+[2024-06-21T20:10:35.227Z]     },
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": null,
+[2024-06-21T20:10:35.227Z]       "Filter": "<AddFilter>b__0"
+[2024-06-21T20:10:35.227Z]     },
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2024-06-21T20:10:35.227Z]       "CategoryName": null,
+[2024-06-21T20:10:35.227Z]       "LogLevel": null,
+[2024-06-21T20:10:35.227Z]       "Filter": "<AddFilter>b__0"
+[2024-06-21T20:10:35.227Z]     }
+[2024-06-21T20:10:35.227Z]   ]
+[2024-06-21T20:10:35.227Z] }
+[2024-06-21T20:10:35.227Z] LanguageWorkerOptions
+[2024-06-21T20:10:35.227Z] {
+[2024-06-21T20:10:35.227Z]   "WorkerConfigs": [
+[2024-06-21T20:10:35.227Z]     {
+[2024-06-21T20:10:35.227Z]       "Description": {
+[2024-06-21T20:10:35.227Z]         "Language": "node",
+[2024-06-21T20:10:35.227Z]         "DefaultRuntimeName": null,
+[2024-06-21T20:10:35.227Z]         "DefaultRuntimeVersion": null,
+[2024-06-21T20:10:35.227Z]         "SupportedArchitectures": null,
+[2024-06-21T20:10:35.227Z]         "SupportedOperatingSystems": null,
+[2024-06-21T20:10:35.227Z]         "SupportedRuntimeVersions": null,
+[2024-06-21T20:10:35.227Z]         "SanitizeRuntimeVersionRegex": null,
+[2024-06-21T20:10:35.227Z]         "WorkerIndexing": "true",
+[2024-06-21T20:10:35.227Z]         "Extensions": [
+[2024-06-21T20:10:35.227Z]           ".js",
+[2024-06-21T20:10:35.227Z]           ".mjs",
+[2024-06-21T20:10:35.229Z]           ".cjs"
+[2024-06-21T20:10:35.229Z]         ],
+[2024-06-21T20:10:35.229Z]         "UseStdErrorStreamForErrorsOnly": false,
+[2024-06-21T20:10:35.229Z]         "DefaultExecutablePath": "node",
+[2024-06-21T20:10:35.229Z]         "DefaultWorkerPath": "/opt/homebrew/Cellar/azure-functions-core-tools@4/4.0.5801/workers/node/dist/src/nodejsWorker.js",
+[2024-06-21T20:10:35.229Z]         "WorkerDirectory": "/opt/homebrew/Cellar/azure-functions-core-tools@4/4.0.5801/workers/node",
+[2024-06-21T20:10:35.229Z]         "Arguments": [],
+[2024-06-21T20:10:35.229Z]         "WorkerArguments": null
+[2024-06-21T20:10:35.229Z]       },
+[2024-06-21T20:10:35.229Z]       "Arguments": {
+[2024-06-21T20:10:35.229Z]         "ExecutablePath": "node",
+[2024-06-21T20:10:35.229Z]         "ExecutableArguments": [],
+[2024-06-21T20:10:35.229Z]         "WorkerPath": "/opt/homebrew/Cellar/azure-functions-core-tools@4/4.0.5801/workers/node/dist/src/nodejsWorker.js",
+[2024-06-21T20:10:35.229Z]         "WorkerArguments": []
+[2024-06-21T20:10:35.229Z]       },
+[2024-06-21T20:10:35.229Z]       "CountOptions": {
+[2024-06-21T20:10:35.229Z]         "SetProcessCountToNumberOfCpuCores": false,
+[2024-06-21T20:10:35.229Z]         "ProcessCount": 1,
+[2024-06-21T20:10:35.229Z]         "MaxProcessCount": 10,
+[2024-06-21T20:10:35.229Z]         "ProcessStartupInterval": "00:00:10",
+[2024-06-21T20:10:35.229Z]         "ProcessStartupTimeout": "00:01:00",
+[2024-06-21T20:10:35.229Z]         "InitializationTimeout": "00:02:00",
+[2024-06-21T20:10:35.229Z]         "EnvironmentReloadTimeout": "00:02:00",
+[2024-06-21T20:10:35.229Z]         "ProcessRestartInterval": "00:00:10",
+[2024-06-21T20:10:35.229Z]         "ProcessShutdownTimeout": "00:00:10"
+[2024-06-21T20:10:35.229Z]       }
+[2024-06-21T20:10:35.229Z]     }
+[2024-06-21T20:10:35.229Z]   ]
+[2024-06-21T20:10:35.229Z] }
+[2024-06-21T20:10:35.229Z] ConcurrencyOptions
+[2024-06-21T20:10:35.229Z] {
+[2024-06-21T20:10:35.229Z]   "DynamicConcurrencyEnabled": false,
+[2024-06-21T20:10:35.229Z]   "MaximumFunctionConcurrency": 500,
+[2024-06-21T20:10:35.229Z]   "CPUThreshold": 0.8,
+[2024-06-21T20:10:35.229Z]   "SnapshotPersistenceEnabled": true
+[2024-06-21T20:10:35.229Z] }
+[2024-06-21T20:10:35.229Z] FunctionResultAggregatorOptions
+[2024-06-21T20:10:35.229Z] {
+[2024-06-21T20:10:35.229Z]   "BatchSize": 1000,
+[2024-06-21T20:10:35.229Z]   "FlushTimeout": "00:00:30",
+[2024-06-21T20:10:35.229Z]   "IsEnabled": true
+[2024-06-21T20:10:35.229Z] }
+[2024-06-21T20:10:35.229Z] SingletonOptions
+[2024-06-21T20:10:35.229Z] {
+[2024-06-21T20:10:35.229Z]   "LockPeriod": "00:00:15",
+[2024-06-21T20:10:35.229Z]   "ListenerLockPeriod": "00:00:15",
+[2024-06-21T20:10:35.229Z]   "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+[2024-06-21T20:10:35.229Z]   "LockAcquisitionPollingInterval": "00:00:05",
+[2024-06-21T20:10:35.229Z]   "ListenerLockRecoveryPollingInterval": "00:01:00"
+[2024-06-21T20:10:35.229Z] }
+[2024-06-21T20:10:35.229Z] EventHubOptions
+[2024-06-21T20:10:35.229Z] {
+[2024-06-21T20:10:35.229Z]   "TargetUnprocessedEventThreshold": null,
+[2024-06-21T20:10:35.229Z]   "MaxEventBatchSize": 100,
+[2024-06-21T20:10:35.229Z]   "MinEventBatchSize": 1,
+[2024-06-21T20:10:35.229Z]   "MaxWaitTime": "00:01:00",
+[2024-06-21T20:10:35.229Z]   "BatchCheckpointFrequency": 1,
+[2024-06-21T20:10:35.229Z]   "TransportType": "AmqpTcp",
+[2024-06-21T20:10:35.229Z]   "WebProxy": "",
+[2024-06-21T20:10:35.229Z]   "ClientRetryOptions": {
+[2024-06-21T20:10:35.229Z]     "Mode": "Exponential",
+[2024-06-21T20:10:35.229Z]     "TryTimeout": "00:01:00",
+[2024-06-21T20:10:35.229Z]     "Delay": "00:00:00.8000000",
+[2024-06-21T20:10:35.229Z]     "MaximumDelay": "00:01:00",
+[2024-06-21T20:10:35.229Z]     "MaximumRetries": 3
+[2024-06-21T20:10:35.229Z]   },
+[2024-06-21T20:10:35.229Z]   "TrackLastEnqueuedEventProperties": false,
+[2024-06-21T20:10:35.229Z]   "PrefetchCount": 300,
+[2024-06-21T20:10:35.229Z]   "PrefetchSizeInBytes": null,
+[2024-06-21T20:10:35.230Z]   "PartitionOwnershipExpirationInterval": "00:02:00",
+[2024-06-21T20:10:35.230Z]   "LoadBalancingUpdateInterval": "00:00:30",
+[2024-06-21T20:10:35.230Z]   "InitialOffsetOptions": {
+[2024-06-21T20:10:35.230Z]     "Type": "",
+[2024-06-21T20:10:35.230Z]     "EnqueuedTimeUtc": null
+[2024-06-21T20:10:35.230Z]   },
+[2024-06-21T20:10:35.230Z]   "EnableCheckpointing": true
+[2024-06-21T20:10:35.230Z] }
+[2024-06-21T20:10:35.230Z] ScaleOptions
+[2024-06-21T20:10:35.230Z] {
+[2024-06-21T20:10:35.230Z]   "ScaleMetricsMaxAge": "00:02:00",
+[2024-06-21T20:10:35.230Z]   "ScaleMetricsSampleInterval": "00:00:10",
+[2024-06-21T20:10:35.230Z]   "MetricsPurgeEnabled": true,
+[2024-06-21T20:10:35.230Z]   "IsTargetScalingEnabled": true,
+[2024-06-21T20:10:35.230Z]   "IsRuntimeScalingEnabled": false
+[2024-06-21T20:10:35.230Z] }
+[2024-06-21T20:10:35.230Z] Starting JobHost
+[2024-06-21T20:10:35.232Z] Starting Host (HostId=lamu0hrpx43hkqy-928338078, InstanceId=70751ed3-53b9-4579-a29b-2a02eaa8f75c, Version=4.34.1.22669, ProcessId=74090, AppDomainId=1, InDebugMode=False, InDiagnosticMode=False, FunctionsExtensionVersion=(null))
+[2024-06-21T20:10:35.243Z] Loading functions metadata
+[2024-06-21T20:10:35.243Z] Worker indexing is enabled
+[2024-06-21T20:10:35.247Z] Fetching metadata for workerRuntime: node
+[2024-06-21T20:10:35.247Z] Reading functions metadata (Worker)
+[2024-06-21T20:10:35.394Z] Worker 3a104a1d-da4b-4922-b5f8-ceee65a38be4 connecting on 127.0.0.1:55308
+[2024-06-21T20:10:35.477Z] Worker 3a104a1d-da4b-4922-b5f8-ceee65a38be4 received WorkerInitRequest
+[2024-06-21T20:10:35.525Z] env = [object Object]
+[2024-06-21T20:10:35.527Z] Loaded entry point file "src/functions/MyEventHubTrigger.js"
+[2024-06-21T20:10:35.527Z] Setting Node.js programming model to "@azure/functions" version "4.5.0"
+[2024-06-21T20:10:35.527Z] Loading entry point file "src/functions/MyEventHubTrigger.js"
+[2024-06-21T20:10:35.582Z] Worker 3a104a1d-da4b-4922-b5f8-ceee65a38be4 received FunctionsMetadataRequest
+[2024-06-21T20:10:35.593Z] 1 functions found (Worker)
+[2024-06-21T20:10:35.605Z] Reading functions metadata (Custom)
+[2024-06-21T20:10:35.613Z] 1 functions found (Custom)
+[2024-06-21T20:10:35.619Z] 1 functions loaded
+[2024-06-21T20:10:35.646Z] Generating 1 job function(s)
+[2024-06-21T20:10:35.648Z] Worker process started and initialized.
+[2024-06-21T20:10:35.649Z] Worker 3a104a1d-da4b-4922-b5f8-ceee65a38be4 received FunctionLoadRequest
+[2024-06-21T20:10:35.675Z] Found the following functions:
+[2024-06-21T20:10:35.675Z] Host.Functions.MyEventHubTrigger
+[2024-06-21T20:10:35.675Z] 
+[2024-06-21T20:10:35.715Z] A host error has occurred during startup operation '4e691519-2df4-469a-a67c-15151ad58224'.
+[2024-06-21T20:10:35.715Z] Microsoft.Azure.WebJobs.Extensions.EventHubs: EventHub account connection string 'Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;' does not exist.Make sure that it is a defined App Setting.
+[2024-06-21T20:10:35.721Z] Stopping JobHost
+[2024-06-21T20:10:35.723Z] Failed to stop host instance '70751ed3-53b9-4579-a29b-2a02eaa8f75c'.
+[2024-06-21T20:10:35.723Z] Microsoft.Azure.WebJobs.Host: The host has not yet started.
+[2024-06-21T20:10:35.749Z] Host startup operation has been canceled
+[2024-06-21T20:10:35.749Z] Initialization cancellation requested by runtime.
+[2024-06-21T20:10:35.750Z] Stopping host...
+[2024-06-21T20:10:35.750Z] Host shutdown completed.
+[2024-06-21T20:10:35.753Z] Shutting down language worker channels for runtime:node
+[2024-06-21T20:10:35.756Z] Worker 3a104a1d-da4b-4922-b5f8-ceee65a38be4 exited with code 0
+Value cannot be null. (Parameter 'provider')
