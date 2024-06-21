@@ -55,4 +55,5 @@ Function Runtime Version: 4.34.1.22669
    extensions: https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-register#explicitly-install-extensions
    - I used the latest version available https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.EventHubs/
      at the time.
+      - `func extensions install --package Microsoft.Azure.WebJobs.Extensions.EventHubs --version 6.3.3`
    - This didn't work either.
