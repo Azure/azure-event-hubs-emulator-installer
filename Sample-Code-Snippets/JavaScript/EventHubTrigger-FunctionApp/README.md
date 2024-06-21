@@ -14,7 +14,10 @@ cd EventHub-Emulator/Scripts/Mac
 2) Start the Azure Function App
 
 ```shell
-cd Sample-Code-Snippets/JavaScript
+cd Sample-Code-Snippets/JavaScript/EventHubTrigger-FunctionApp
+
 npm install
+
 npm run start
+# or func start
 ```
