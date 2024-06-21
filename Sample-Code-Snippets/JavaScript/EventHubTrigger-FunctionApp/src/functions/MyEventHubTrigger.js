@@ -1,6 +1,8 @@
 const {app} = require('@azure/functions');
 
-app.eventHub('eventHubTrigger', {
+console.debug(`env = ${process.env}`);
+
+app.eventHub('MyEventHubTrigger', {
     connection: "Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;",
     eventHubName: 'eh1',
     consumerGroup: 'cg1',
