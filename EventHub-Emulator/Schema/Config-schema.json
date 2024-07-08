@@ -1,93 +1,95 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "properties": {
-        "UserConfig": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "UserConfig": {
+      "type": "object",
+      "description": "User specified configuration is defined here",
+      "properties": {
+        "NamespaceConfig": {
+          "type": "array",
+          "description": "Namespace configuration is defined here",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
             "type": "object",
-            "description": "User specified configuration is defined here",
             "properties": {
-                "NamespaceConfig": {
-                    "type": "array",
-                    "description": "Namespace configuration is defined here",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "items": {
+              "Type": {
+                "type": "string",
+                "description": "Type of the namespace",
+                "enum": ["EventHub"]
+              },
+              "Name": {
+                "type": "string",
+                "description": "Name of the namespace",
+                "pattern": "^[A-Za-z][-A-Za-z0-9]*[A-Za-z0-9]$",
+                "enum": ["emulatorNs1"]
+              },
+              "Entities": {
+                "type": "array",
+                "description": "List of event hubs in the namespace",
+                "minItems": 1,
+                "maxItems": 10,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Name": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9]$|^[A-Za-z0-9][\\w-\\.\\/]*[A-Za-z0-9]$",
+                      "description": "Name of the event hub"
+                    },
+                    "PartitionCount": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 32,
+                      "description": "Number of partitions in the event hub"
+                    },
+                    "ConsumerGroups": {
+                      "type": "array",
+                      "description": "List of consumer groups in the event hub",
+                      "minItems": 1,
+                      "maxItems": 20,
+                      "items": {
                         "type": "object",
                         "properties": {
-                            "Type": {
-                                "type": "string",
-                                "description": "Type of the namespace",
-                                "enum": ["EventHub"]
-                            },
-                            "Name": {
-                                "type": "string",
-                                "description": "Name of the namespace",
-                                "enum": ["emulatorNs1"]
-                            },
-                            "Entities": {
-                                "type": "array",
-                                "description": "List of event hubs in the namespace",
-                                "minItems": 1,
-                                "maxItems": 10,
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "Name": {
-                                            "type": "string",
-                                            "description": "Name of the event hub"
-                                        },
-                                        "PartitionCount": {
-                                            "type": "string",
-                                            "description": "Number of partitions in the event hub"
-                                        },
-                                        "ConsumerGroups": {
-                                            "type": "array",
-                                            "description": "List of consumer groups in the event hub",
-                                            "minItems": 1,
-                                            "maxItems": 20,
-                                            "items": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "Name": {
-                                                        "type": "string",
-                                                        "description": "Name of the consumer group",
-                                                        "not": {
-                                                            "const": "$default"
-                                                        }
-                                                    }
-                                                },
-                                                "required": ["Name"]
-                                            },
-                                            "default": [
-                                                {
-                                                    "Name": "$default"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "required": ["Name", "PartitionCount"]
-                                }
-                            }
-                        },
-                        "required": ["Type", "Name", "Entities"]
-                    }
-                },
-                "LoggingConfig": {
-                    "type": "object",
-                    "description": "Configuration for logging is defined here",
-                    "properties": {
-                        "Type": {
+                          "Name": {
                             "type": "string",
-                            "description": "Types of logging",
-                            "enum": ["File", "Console", "File,Console", "Console,File"]
+                            "pattern": "^[A-Za-z0-9]$|^[A-Za-z0-9][\\w-\\.\\/]*[A-Za-z0-9]$",
+                            "description": "Name of the consumer group"
+                          }
+                        },
+                        "required": ["Name"]
+                      },
+                      "default": [
+                        {
+                          "Name": "$default"
                         }
-                    },
-                    "required": ["Type"]
+                      ]
+                    }
+                  },
+                  "required": ["Name", "PartitionCount"]
                 }
+              }
             },
-            "required": ["NamespaceConfig", "LoggingConfig"]
+            "required": ["Entities"]
+          }
+        },
+        "LoggingConfig": {
+          "type": "object",
+          "description": "Configuration for logging is defined here",
+          "properties": {
+            "Type": {
+              "type": "string",
+              "description": "Types of logging",
+              "enum": ["File", "Console", "File,Console", "Console,File"]
+            }
+          },
+          "required": ["Type"]
         }
-    },
-    "required": ["UserConfig"],
-    "description": "Main user configuration object"
+      },
+      "required": ["NamespaceConfig", "LoggingConfig"]
+    }
+  },
+  "required": ["UserConfig"],
+  "description": "Main user configuration object"
 }
