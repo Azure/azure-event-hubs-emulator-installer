@@ -8,7 +8,7 @@ This repository contains the scripts required to install and run the  [Azure Eve
   - [Prerequisites](#Prerequisites)
   - [Running Emulator](#Running-the-emulator)
     - [Using Automated Script](#Using-Automated-Script)
-    - [Using Docker Compose](#Using-Docker-Compose-(-Linux-Container-))
+    - [Using Docker Compose](#Using-Docker-Compose-Linux-Container)
   - [Interacting with Emulator](#Interacting-with-emulator)
   - [Support](#Support)
   - [License](#License)
@@ -48,7 +48,7 @@ This section highlights different steps to run Event Hubs Emulator. Details are 
 
 #### [Using Automated Script](#tab/automated-script)
 
- Before running automated script, clone the installation [repository](https://github.com/Azure/azure-event-hubs-emulator) locally.
+ Before running automated script, clone the installation [repository](https://github.com/Azure/azure-event-hubs-emulator-installer) locally.
  
 ### Windows
 After completing the prerequisites, you can proceed with the following steps to run the Event Hubs Emulator locally. 
