@@ -22,6 +22,7 @@ If applicable, add screenshots to help explain your problem.
 **Logs**
 If applicable, add the logs generated from the container.
 To know more about logs please refer here: [EventHubs-Emulator Logs](https://learn.microsoft.com/en-us/azure/event-hubs/overview-emulator#drill-through-available-logs)
+<img src="..\..\Images\DockerImagePath.png" alt="DockerImagePath">
 
 **Desktop:**
  - OS: [e.g. Windows]
