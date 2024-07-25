@@ -7,6 +7,10 @@
     "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
     "EventHubConnection": "Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;",
     "EventHubTopic": "inbound_eh",
-    "ConsumerGroups": "cg1"
+    "ConsumerGroups": "icg1",
+    "REventHubTopic": "right_eh",
+    "RConsumerGroups": "rcg1",
+    "LEventHubTopic": "left_eh",
+    "LConsumerGroups": "lcg1"
   }
 }

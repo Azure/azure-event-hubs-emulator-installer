@@ -3,8 +3,7 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
-
-# aiohttp
-# azure-functions-durable
-# azure-eventhub
-# azure-eventhub-checkpointstoreblob-aio
+aiohttp
+azure-functions-durable
+azure-eventhub
+azure-eventhub-checkpointstoreblob-aio

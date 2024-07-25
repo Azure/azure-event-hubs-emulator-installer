@@ -2,14 +2,6 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "func",
-			"label": "func: host start",
-			"command": "host start",
-			"problemMatcher": "$func-python-watch",
-			"isBackground": true,
-			"dependsOn": "pip install (functions)"
-		},
-		{
 			"label": "pip install (functions)",
 			"type": "shell",
 			"osx": {
@@ -21,6 +13,20 @@
 			"linux": {
 				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
 			},
+			"problemMatcher": []
+		},
+		{
+			"type": "func",
+			"label": "func: host start",
+			"command": "host start",
+			"problemMatcher": "$func-python-watch",
+			"isBackground": true,
+			"dependsOn": "func: extensions install"
+		},
+		{
+			"type": "func",
+			"command": "extensions install",
+			"dependsOn": "pip install (functions)",
 			"problemMatcher": []
 		}
 	]
