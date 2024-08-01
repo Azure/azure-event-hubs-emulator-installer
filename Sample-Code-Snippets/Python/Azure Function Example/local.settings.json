@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    "EventHubConnection": "Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;",
+    "EventHubTopic": "inbound_eh",
+    "ConsumerGroups": "icg1",
+    "REventHubTopic": "right_eh",
+    "RConsumerGroups": "rcg1",
+    "LEventHubTopic": "left_eh",
+    "LConsumerGroups": "lcg1"
+  }
+}
