@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    azure:
+      eventhubs:
+        event-hub-name: eh1
+        consumer:
+          consumer-group: $default
+        connection-string: Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;
