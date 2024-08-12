@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    azure:
+      eventhubs:
+        connection-string: Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;
+        processor:
+          checkpoint-store:
+            container-name: eventhub-binder-app
+            account-name: devstoreaccount1
+            account-key: Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
+            endpoint: http://127.0.0.1:10000/devstoreaccount1
+            create-container-if-not-exists: true
+    function:
+      definition: consume;supply
+    stream:
+      bindings:
+        consume-in-0:
+          destination: eh1
+          group: $default
+        supply-out-0:
+          destination: eh1
+      eventhubs:
+        bindings:
+          consume-in-0:
+            consumer:
+              checkpoint:
+                mode: MANUAL
+      default:
+        producer:
+          errorChannelEnabled: true
+      poller:
+        initial-delay: 0
+        fixed-delay: 1000
