@@ -63,6 +63,12 @@ After completing the prerequisites, you can proceed with the following steps to 
 
 1. Execute the setup script `LaunchEmulator.sh` . Running the script would  bring up two containers – Event Hubs Emulator & Azurite (dependency for Emulator)
 
+1. Execute the same script `LaunchEmulator.sh` with the option `--compose-down=Y` to issue a `docker compose down` to terminate the containers.
+
+```shell
+LaunchEmulator.sh --compose-down=Y
+```
+
 #### [Using Docker Compose (Linux Container)](#tab/docker-linux-container)
 
 You can also spin up Emulator using Docker Compose file from Microsoft Container Registry. Refer [here](https://mcr.microsoft.com/en-us/product/azure-messaging/eventhubs-emulator/about#usage) for details. 
