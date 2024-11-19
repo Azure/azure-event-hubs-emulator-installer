@@ -89,6 +89,34 @@ To get started, refer to our GitHub Samples [here](https://github.com/Azure/azur
   
 >[!TIP]
 > $Default [consumer group](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups) is created by default when emulator runs. You can't create $default consumer group with supplied configuration.
+
+### Networking options
+You can run and connect to Emulator in multiple ways. Use a `Connection String` from following as per your use-case:
+
+- When the emulator container and interacting application are running natively on local machine:
+```
+"Endpoint=sb://localhost;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
+```
+
+- Applications (Containerized/Non-containerized) on the different machine and same local network can interact with Emulator using the IPv4 address of the machine:
+```
+"Endpoint=sb://192.168.y.z;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
+```
+
+- Application containers on the same bridge network can interact with Emulator using its alias or IP. Following connection string assumes the name of Emulator has default value i.e."eventhubs-emulator":
+```
+Endpoint=sb://eventhubs-emulator;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
+```
+
+- Application containers on the different bridge network can interact with Emulator using the "host.docker.internal" as host:
+```
+"Endpoint=sb://host.docker.internal;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
+```
+
+> **Note**
+If you are using the Kafka protocol, ensure that you update the `Bootstrap Servers` property with the appropriate host from the options above, based on your use case.
+
+
 ## Support
 
 There is no official support provided for Emulator.Any issues/suggestions should be reported via GitHub issues on [installation repo](https://github.com/Azure/azure-event-hubs-emulator-installer/issues).
