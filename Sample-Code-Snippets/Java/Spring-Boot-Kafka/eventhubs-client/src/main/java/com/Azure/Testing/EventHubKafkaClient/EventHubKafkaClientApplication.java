@@ -76,7 +76,7 @@ public class EventHubKafkaClientApplication implements CommandLineRunner {
 			put(VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getCanonicalName());
 		}};
 		try (final Producer<String, String> producer = new KafkaProducer<>(producerProperties)) {
-			final int numMessages = 10;
+			final int numMessages = 100;
 			for (int i = 0; i < numMessages; i++) {
 				String key = "Key: " + i;
 				String value = "Value: " + i;
