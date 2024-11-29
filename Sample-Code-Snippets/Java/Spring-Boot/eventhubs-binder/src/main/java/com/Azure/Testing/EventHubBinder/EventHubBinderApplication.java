@@ -1,7 +1,11 @@
 package com.Azure.Testing.EventHubBinder;
 
+import com.azure.messaging.eventhubs.EventProcessorClientBuilder;
+import com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore;
 import com.azure.spring.messaging.checkpoint.Checkpointer;
 import com.azure.spring.messaging.eventhubs.support.EventHubsHeaders;
+import com.azure.storage.blob.BlobContainerAsyncClient;
+import com.azure.storage.blob.BlobContainerClientBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -31,6 +35,26 @@ public class EventHubBinderApplication implements CommandLineRunner{
 		return ()->many.asFlux()
 				.doOnNext(m->LOGGER.info("Manually sending message {}", m))
 				.doOnError(t->LOGGER.error("Error encountered", t));
+	}
+
+	@Bean
+	public BlobContainerAsyncClient blobContainerAsyncClient() {
+		var blobContainerAsyncClient = new BlobContainerClientBuilder()
+				.connectionString("UseDevelopmentStorage=true")
+				.containerName("sample-container")
+				.buildAsyncClient();
+
+		blobContainerAsyncClient.createIfNotExists().block();
+		return blobContainerAsyncClient;
+	}
+
+	@Bean
+	public BlobCheckpointStore blobCheckpointStore(BlobContainerAsyncClient blobContainerAsyncClient) {
+		return new BlobCheckpointStore(blobContainerAsyncClient);
+	}
+
+	public EventProcessorClientBuilder eventProcessorClientBuilder(BlobCheckpointStore blobCheckpointStore){
+		return new EventProcessorClientBuilder().checkpointStore(blobCheckpointStore);
 	}
 
 	@Bean
