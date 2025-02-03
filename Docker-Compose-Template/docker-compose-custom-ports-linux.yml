@@ -18,6 +18,7 @@ services:
   azurite:
     container_name: "azurite"
     image: "mcr.microsoft.com/azure-storage/azurite:latest"
+    pull_policy: always
     ports:
       - "10005:10000"
       - "10006:10001"
