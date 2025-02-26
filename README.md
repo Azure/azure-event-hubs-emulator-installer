@@ -51,17 +51,26 @@ This section highlights different steps to run Event Hubs Emulator. Details are 
  Before running automated script, clone the installation [repository](https://github.com/Azure/azure-event-hubs-emulator-installer) locally.
  
 ### Windows
-After completing the prerequisites, you can proceed with the following steps to run the Event Hubs Emulator locally. 
-1. Before executing the setup script, we need to allow execution of unsigned scripts. Run the below command in the PowerShell window:
 
-`$>Start-Process powershell -Verb RunAs -ArgumentList 'Set-ExecutionPolicy Bypass –Scope CurrentUser’`
+After completing the prerequisites, you can proceed with the following steps to run the Event Hubs Emulator locally on Windows: 
 
-2. Execute setup script `LaunchEmulator.ps1`. Running the script would bring up two containers – Event Hubs Emulator & Azurite (dependency for Emulator)
+1. **Open PowerShell** and navigate to the directory where the common scripts [folder](EventHub-Emulator/Scripts/Common) is cloned using `cd`:
+   ```powershell
+   cd <path to your common scripts folder> # Update this path
+      
+2. Issue wsl command to open WSL at this directory.
+   ```powershell
+   wsl
+
+3. **Run the setup script** *./LaunchEmulator.sh* Running the script brings up two containers: the Event Hubs emulator and Azurite (a dependency for the emulator).
+   ```bash
+   ./Launchemulator.sh
+ 
 
 ### Linux & macOS
 After completing the prerequisites, you can proceed with the following steps to run the Event Hubs Emulator locally. 
 
-1. Execute the setup script `LaunchEmulator.sh` . Running the script would  bring up two containers – Event Hubs Emulator & Azurite (dependency for Emulator)
+1. Execute the setup script [LaunchEmulator.sh](EventHub-Emulator/Scripts/Common/LaunchEmulator.sh) . Running the script would  bring up two containers – Event Hubs Emulator & Azurite (dependency for Emulator)
 
 1. Execute the same script `LaunchEmulator.sh` with the option `--compose-down=Y` to issue a `docker compose down` to terminate the containers.
 
