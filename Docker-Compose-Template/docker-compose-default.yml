@@ -2,7 +2,7 @@ name: microsoft-azure-eventhubs
 services:
   emulator:
     container_name: "eventhubs-emulator"
-    image: "messagingemulators.azurecr.io/staging/azure-messaging/eventhubs-emulator:latest"
+    image: "mcr.microsoft.com/azure-messaging/eventhubs-emulator:latest"
     pull_policy: always
     volumes:
       - "${CONFIG_PATH}:/Eventhubs_Emulator/ConfigFiles/Config.json"
