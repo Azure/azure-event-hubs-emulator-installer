@@ -9,6 +9,7 @@ services:
     ports:
       - "5672:5672"
       - "9092:9092"
+      - "5300:5300"
     environment:
       BLOB_SERVER: host.docker.internal:10005
       METADATA_SERVER: host.docker.internal:10007
