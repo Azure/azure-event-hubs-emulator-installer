@@ -5,6 +5,7 @@ ACCEPT_EULA='n'
 CONFIG_PATH='../EventHub-Emulator/Config/Config.json'
 COMPOSE_DOWN='n'
 composeFile=$(realpath "$(dirname "$BASH_SOURCE")/../../../Docker-Compose-Template/docker-compose-default.yml")
+EMULATOR_AMQP_PORT=''
 
 # Loop through all arguments
 for arg in "$@"
@@ -29,6 +30,10 @@ do
             exit 1
         fi
     fi
+
+    if [[ $arg == --EMULATOR_AMQP_PORT=* ]]; then
+        EMULATOR_AMQP_PORT="${arg#*=}"
+    fi
 done
 
 # Skip EULA check if only running docker compose down
@@ -51,6 +56,7 @@ fi
 
 # Set Config Path as env variable
 export CONFIG_PATH=$CONFIG_PATH
+if [[ -n "$EMULATOR_AMQP_PORT" ]]; then export EMULATOR_AMQP_PORT=$EMULATOR_AMQP_PORT; fi
 
 # Run docker compose down
 docker compose -f $composeFile down

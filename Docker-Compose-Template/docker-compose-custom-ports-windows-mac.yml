@@ -7,7 +7,7 @@ services:
     volumes:
       - "${CONFIG_PATH}:/Eventhubs_Emulator/ConfigFiles/Config.json"
     ports:
-      - "5672:5672"
+      - "${EMULATOR_AMQP_PORT:-5672}:5672"
       - "9092:9092"
       - "5300:5300"
     environment:
