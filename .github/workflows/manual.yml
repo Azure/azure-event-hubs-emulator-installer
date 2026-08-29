@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Assign issues to me
-      uses: actions/github-script@v5
+      uses: actions/github-script@211cb3fefb35a799baa5156f9321bb774fe56294 # v5.2.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
