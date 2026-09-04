@@ -1,6 +1,7 @@
 param(
   [string]$ACCEPT_EULA='n',
-  [string]$CONFIG_PATH='../EventHub-Emulator/Config/Config.json'
+  [string]$CONFIG_PATH='../EventHub-Emulator/Config/Config.json',
+  [string]$EMULATOR_AMQP_PORT='5672'
 )
 
 Write-Warning "As running native .ps1 script required updating your machine's execution policy,
@@ -33,6 +34,9 @@ $env:ACCEPT_EULA = $ACCEPT_EULA
 
 # Set Config Path as env variable
 $env:CONFIG_PATH = $CONFIG_PATH
+
+# Set AMQP host port as env variable
+$env:EMULATOR_AMQP_PORT = $EMULATOR_AMQP_PORT
 
 # Run Docker Compose
 docker compose -f $composeFile down

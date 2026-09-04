@@ -72,6 +72,11 @@ After completing the prerequisites, you can proceed with the following steps to 
 
 1. Execute the setup script [LaunchEmulator.sh](EventHub-Emulator/Scripts/Common/LaunchEmulator.sh) . Running the script would  bring up two containers – Event Hubs Emulator & Azurite (dependency for Emulator)
 
+   Optionally, you can remap the host AMQP port (for example, to avoid conflicts with other local emulators):
+   ```shell
+   LaunchEmulator.sh --EMULATOR_AMQP_PORT=5674
+   ```
+
 1. Execute the same script `LaunchEmulator.sh` with the option `--compose-down=Y` to issue a `docker compose down` to terminate the containers.
 
 ```shell
@@ -122,6 +127,11 @@ Endpoint=sb://eventhubs-emulator;SharedAccessKeyName=RootManageSharedAccessKey;S
 "Endpoint=sb://host.docker.internal;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
 ```
 
+> [!IMPORTANT]
+>
+> Message send/receive operations use AMQP port **5672** by default.<br>
+> If you remap the host AMQP port (for example, `EMULATOR_AMQP_PORT=5674`), append that port in the connection string endpoint (for example, `Endpoint=sb://localhost:5674;...`).
+
 > **Note**
 If you are using the Kafka protocol, ensure that you update the `Bootstrap Servers` property with the appropriate host from the options above, based on your use case.
 
@@ -142,5 +152,4 @@ The software (Azure Event Hubs Emulator) that the scripts in this repository ins
 
 
    
-
 
